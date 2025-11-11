@@ -3,7 +3,7 @@
 This document explains the fundamental concepts of interacting with a computer using the command line.
 
 ## 1. Console
-The **console** is the general concept of **interacting with a computer using text**. Originally, it was a physical device consisting of a screen and a keyboard directly connected to the machine. Today, the console is often virtual, but it still represents the idea of a text-based interface that allows communication with the system.
+The **console** is the general concept of **interacting with a computer using text**. Originally, it was a physical device consisting of a screen and a keyboard directly connected to the machine. Today, the console has been virtualized, but it still represents the idea of a text-based interface that allows communication with the system. It is only used for displaying.
 
 ---
 
@@ -24,3 +24,14 @@ A **command** is an instruction given to the shell, and **arguments** are additi
 
 ## Conclusion
 The console represents the concept of text-based interaction, the terminal is the window that manages input and output, the shell is the program that interprets and executes commands, and commands with arguments are the instructions provided by the user. Together, these elements form a complete system that allows users to communicate with and control the computer using text commands.
+
+------
+
+
+
+# Archiving script
+To run the script : 
+- Open a terminal
+- Write : "./run.sh urls.txt <DOWNLOAD> <ARCHIVES>" 
+  <DOWNLOAD> → name of the folder where the downloaded files will be stored
+  <ARCHIVES> → name of the folder where the .tar.gz archive will be stored

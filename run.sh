@@ -2,10 +2,17 @@ chmod +x run.sh
 
 #-----------
 
+#ARGUMENTS
+URL_FILE="$1"
+DOWNLOAD_DIR="$2"
+ARCHIVES_DIR="$3"
+
 # VARIABLES
 DATE=$(date +"%Y-%m-%dT%H:%M:%S.%3N%z")
 PATH_TO_FILE=$(realpath "$0")
 TMP_DIR="$(pwd)/tmp"
+HEADERS_FILE="$2/headers.txt"
+ARCHIVE_NAME="D$(date +"%Y-%m-%dT%H-%M-%S").tar.gz"
 
 # COLORS
 BLUE_UNDERLINE="\033[34;4m"
@@ -14,13 +21,6 @@ RESET="\033[0m"
 
 #-----------
 
-#ARGUMENTS
-URL_FILE="$1"
-DOWNLOAD_DIR="$2"
-ARCHIVES_DIR="$3"
-
-HEADERS_FILE="$2/headers.txt"
-ARCHIVE_NAME="D$(date +"%Y-%m-%dT%H-%M-%S").tar.gz"
 
 #-----------
 
@@ -63,9 +63,9 @@ compressing_files() {
 
 # SCRIPT EXECUTION
 echo "> Bash script starting at: $DATE"
-echo "Script full path: '$PATH_TO_FILE'"
+echo "> Script full path: '$PATH_TO_FILE'"
 mkdir -p "$TMP_DIR"
-echo "$TMP_DIR file created"
+echo "> $TMP_DIR file created"
 download_url
 echo "> Copying JSON files from '$TMP_DIR' to '$2'…"
 mkdir -p "$2"
@@ -76,4 +76,4 @@ echo "> Compressing all files in '$2' to '$3'…"
 mkdir -p "$3"
 compressing_files
 echo "> Bash script ending at: $DATE"
-echo "Bye!"
+echo "> Bye!"
