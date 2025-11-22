@@ -32,6 +32,6 @@ The console represents the concept of text-based interaction, the terminal is th
 # Archiving script
 To run the script : 
 - Open a terminal
-- Write : "./run.sh urls.txt <DOWNLOAD> <ARCHIVES>" 
-  <DOWNLOAD> → name of the folder where the downloaded files will be stored
-  <ARCHIVES> → name of the folder where the .tar.gz archive will be stored
+- Write : "./run.sh urls.txt DOWNLOAD ARCHIVES"  
+  DOWNLOAD → name of the folder where the downloaded files will be stored  
+  ARCHIVES> → name of the folder where the .tar.gz archive will be stored
