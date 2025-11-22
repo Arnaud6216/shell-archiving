@@ -55,7 +55,7 @@ headers_compile() {
 }
 
 compressing_files() {
-   tar -czf "$ARCHIVES_DIR/$ARCHIVE_NAME" -C "$DOWNLOAD_DIR" .
+   GZIP=-9 tar -czf "$ARCHIVES_DIR/$ARCHIVE_NAME" -C "$DOWNLOAD_DIR" .
    echo -e "${GREEN}Done${RESET} (archive file name: $ARCHIVE_NAME)"
 }
 
